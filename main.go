@@ -23,18 +23,18 @@ func main() {
 	//d := "wow"
 	amy := students{
 		Name:   "amy",
-		Number: "C109118211", //json的第一種寫法;用于生成json字符串
+		Number: "C109118211", //用于生成json字符串
 	}
 
 	vin := students{}
 	vin.Name = "vin"
-	vin.Number = "C109118211" //json的第二種寫法;指针變量
+	vin.Number = "C109118211" //指针變量
 
 	class := []students{vin, amy}
 	class2 := []students{}
 
 	for index, value := range class {
-		class2 := append(class2, value) //最好分配0長度，append會自動增長
+		class2 := append(class2, value) //append有連接的意思
 		fmt.Println(index, class2)
 	}
 	//序列化
