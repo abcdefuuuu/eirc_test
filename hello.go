@@ -6,8 +6,8 @@ import (
 )
 
 type people struct { //json 是一種很好擴充的資料格式🉐type 結構名稱 struct{}
-	Id   int    `json:id` //🈯key值要大寫才會被輸出🉐Id int...;但若是需要小寫或其他的名稱,則使用struct tag🉐Id int `json:id`
-	Name string `json:name`
+	Id   int    `json:id`   //🈯key值要大寫才會被輸出🉐Id int...;但若是需要小寫或其他的名稱,則使用struct tag🉐Id int `json:id`
+	Name string `json:name` //🈯没有json tag或者tag中name省略（但不能少了","）//忽略必须使用json:"-"
 }
 
 type employees struct {
